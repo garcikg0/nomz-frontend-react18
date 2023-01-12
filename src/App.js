@@ -1,33 +1,29 @@
-import { Route, Routes, Link } from "react-router-dom"
+import { useState } from "react";
+import { Route, Routes, Link, useNavigate } from "react-router-dom"
+import bvideo from "./components/backgroundVideo.mp4"
 import './App.css';
-import LandingPage from "./pages/LandingPage";
-import Login from "./pages/Login";
-import Logout from "./pages/Logout";
-import NotFound from "./pages/NotFound";
 
 function App() {
+
   return( 
   <>
-  <nav>
+  <nav id="navigation">
+    <h1>Nomz</h1>
     <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/login">Login</Link>
-      </li>
-      <li>
-        <Link to="/logout">Logout</Link>
-      </li>
+      <li>Login</li>
+      <li>Sign Up</li>
     </ul>
   </nav>
-  <Routes>
-    <Route path="/" element={<LandingPage/>} />
-    <Route path="/login" element={<Login/>} />
-    <Route path="/logout" element={<Logout/>} />
-    <Route path="*" element={<NotFound/>} />
-  </Routes>
+  <div className="video">
+    <video autoPlay loop muted>
+      <source src={bvideo} type="video/mp4"/>
+    </video>
+  </div>
+
+  <h1>Nomz</h1>
+  <h2>Your time-saving recipe and ingredient management tool</h2>
   </>
+  
   )
 }
 
