@@ -8,13 +8,6 @@ const LandingPage = () => {
     return(
     <>
     <div id="layout-grid">
-        <nav id="navigation">
-        <h1>Nomz</h1>
-        <ul>
-            <li><Link to="/home">Login</Link></li>
-            <li>Sign Up</li>
-        </ul>
-        </nav>
         <div id="jumbotron">
         <video autoPlay loop muted>
         <source src={bvideo} type="video/mp4"/>
