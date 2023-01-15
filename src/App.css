@@ -14,7 +14,7 @@
   height: 100vh;
   width: 100vw;
   grid-row-gap: 0rem;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 #navigation {
@@ -109,6 +109,7 @@
   object-fit: scale-down;
   height: 25%;
   width: 25%;
+  margin: 0.2rem 0rem;
 }
 
 #content-card h3 {
@@ -126,3 +127,264 @@
   margin: 1.12rem;
   align-self: center;
 }
+
+/* mobile devices 480px and down*/
+@media only screen and (max-width: 480px) {
+  #layout-grid {
+    display: grid;
+    grid:
+      [header-start] "header" 10vh
+      [main] "main" 90vh;
+    height: 100vh;
+    width: 100vw;
+    grid-row-gap: 0rem;
+  }
+  
+  #jumbotron {
+    display: none;
+  }
+  
+  #jumbotron video {
+    display: none;
+  }
+
+  #content {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+  }
+  
+  #content-card {
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    margin: 2vw 2vw;
+  }
+  
+  #content-card-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #content-card-icon img {
+    object-fit: scale-down;
+    margin: 0.5rem 0rem;
+  }
+  
+  #content-card h3 {
+    margin: 0.1rem 0rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  #content-card hr {
+    width: 90%;
+    /* display: none; */
+  }
+  
+  #content-card p {
+    font-size: 0.8rem;
+    margin: 1.12rem;
+    align-self: center;
+    /* display: none; */
+  }
+}
+
+/* mobile devices 480px and down landscape */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  #layout-grid {
+    display: grid;
+    grid:
+      [header-start] "header" 10vh
+      [main] "main" 90vh;
+    height: 100vh;
+    width: 100vw;
+    grid-row-gap: 0rem;
+  }
+  
+  #jumbotron {
+    display: none;
+  }
+  
+  #jumbotron video {
+    display: none;
+  }
+
+  #content {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+  }
+  
+  #content-card {
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    margin: 2vw 2vw;
+  }
+  
+  #content-card-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #content-card-icon img {
+    object-fit: scale-down;
+    margin: 0.5rem 0rem;
+  }
+  
+  #content-card h3 {
+    margin: 0.1rem 0rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  #content-card hr {
+    width: 90%;
+    /* display: none; */
+  }
+  
+  #content-card p {
+    font-size: 0.8rem;
+    margin: 1.12rem;
+    align-self: center;
+    /* display: none; */
+  }
+}
+
+/*  mobile devices between 480px and 768px landscape */
+@media only screen and (min-width: 480px) and (max-width: 768px) and (orientation: landscape) {
+  #layout-grid {
+    display: grid;
+    grid:
+      [header-start] "header" 10vh
+      [main] "main" 90vh;
+    height: 100vh;
+    width: 100vw;
+    grid-row-gap: 0rem;
+  }
+  
+  #jumbotron {
+    display: none;
+  }
+  
+  #jumbotron video {
+    display: none;
+  }
+
+  #content {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+  }
+  
+  #content-card {
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    margin: 2vw 2vw;
+  }
+  
+  #content-card-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #content-card-icon img {
+    object-fit: scale-down;
+    margin: 0.5rem 0rem;
+  }
+  
+  #content-card h3 {
+    margin: 0.1rem 0rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  #content-card hr {
+    width: 90%;
+  }
+  
+  #content-card p {
+    font-size: 0.8rem;
+    margin: 1.12rem;
+    align-self: center;
+  }
+}
+
+/* iPads, tablets 768px and up*/
+/* @media only screen and (min-width: 768px) {
+  
+} */
+
+/* iPads, tablets 768px and up landscape*/
+@media only screen and (min-width: 480px) and (max-width: 844px) and(orientation: landscape) {
+  #layout-grid {
+    display: grid;
+    grid:
+      [header-start] "header" 10vh
+      [main] "main" 90vh;
+    height: 100vh;
+    width: 100vw;
+    grid-row-gap: 0rem;
+  }
+  
+  #jumbotron {
+    display: none;
+  }
+  
+  #jumbotron video {
+    display: none;
+  }
+
+  #content {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+  }
+  
+  #content-card {
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    margin: 2vw 2vw;
+  }
+  
+  #content-card-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #content-card-icon img {
+    object-fit: scale-down;
+    margin: 0.5rem 0rem;
+  }
+  
+  #content-card h3 {
+    margin: 0.1rem 0rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  #content-card hr {
+    width: 90%;
+    /* display: none; */
+  }
+  
+  #content-card p {
+    font-size: 0.8rem;
+    margin: 1.12rem;
+    align-self: center;
+    /* display: none; */
+  }
+}
+
+/* small screen, laptops 1024px and up*/
+/* @media only screen and (min-width: 1024px) {
+} */
+
+  
+/* desktops, large screen 1200px and up*/
+/* @media only screen and (min-width: 1200px) {
+
+} */
