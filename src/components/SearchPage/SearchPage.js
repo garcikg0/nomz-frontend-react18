@@ -1,0 +1,11 @@
+import React from "react";
+import './styles.css';
+
+const SearchPage = () => {
+
+    return(
+        <h1>SearchPage</h1>
+    )
+};
+
+export default SearchPage;
