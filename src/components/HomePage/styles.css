@@ -39,8 +39,62 @@
 }
 
 #menu-card img{
-    object-fit: fill;
+    object-fit: scale-down;
     height: 100%;
     width: 100%;
     border-radius: .3rem;
+}
+
+@media only screen and (max-width: 480px) {
+    #kitchen-nav-container {
+        width: 100vw;
+        padding: 0rem;
+    }
+
+    #kitchen-navbar {
+        padding: 0rem;
+    }
+
+    #kitchen-navbar ul {
+        padding: 0rem;
+    }
+    
+    #menu-card-deck {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+
+    #menu-card {
+        text-align: center;
+    }
+
+    #menu-card img {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 844px) and (orientation: portrait) {
+    #kitchen-nav-container {
+        width: 100vw;
+        padding: 0rem;
+    }
+    
+    #menu-card-deck {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+
+    #menu-card {
+        text-align: center;
+    }
+
+    #menu-card img {
+        width: 60%;
+    }
 }
