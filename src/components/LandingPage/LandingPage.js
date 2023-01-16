@@ -1,6 +1,5 @@
 import React from 'react';
 import bvideo from '../backgroundVideo.mp4'
-import { Link } from 'react-router-dom'
 import './styles.css'
 
 const LandingPage = () => {

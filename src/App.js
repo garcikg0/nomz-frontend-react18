@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Route, Routes, Link, useNavigate } from "react-router-dom";
-import bvideo from "./components/backgroundVideo.mp4"
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
 import LandingPage from "./components/LandingPage/LandingPage";

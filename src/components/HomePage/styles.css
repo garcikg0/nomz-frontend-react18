@@ -1,0 +1,46 @@
+#layout-grid-home-page {
+    display: grid;
+    grid:
+        [kitchenNav] "kitchenNav" 15vh
+        [main] "main" 75vh;
+    height: 90vh;
+    width: 100%;
+    grid-row-gap: 0rem;
+}
+
+#kitchen-nav-container {
+    grid-area: kitchenNav;
+    padding: 1rem;
+}
+
+#kitchen-navbar {
+    height: 10vh;
+    display: flex;
+    padding: 0.1rem 10rem;
+    justify-content: center;
+}
+
+#kitchen-navbar ul {
+    list-style-type: none;
+}
+
+#main-home-page {
+    grid-area: main;
+    display: flex;
+    /* justify-content: center; */
+}
+
+#menu-card-deck {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 1rem;
+    margin: auto 1rem;
+    width: 100%;
+}
+
+#menu-card img{
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+    border-radius: .3rem;
+}
