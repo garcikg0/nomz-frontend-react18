@@ -28,7 +28,6 @@
 
 #card h1 {
     grid-area: title;
-    /* height: 100%; */
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
@@ -39,7 +38,6 @@
 #card h2 {
     grid-area: source;
     text-align: center;
-    /* height: 100%; */
     width: 100%;
     font-size: 1.2rem;
     margin: 0rem;
@@ -81,4 +79,54 @@
     display: inline-flex;
     padding-left: 0.5rem;
     font-size: 1rem;
+}
+
+/* mobile devices 480px and down*/
+@media only screen and (max-width: 480px) {
+
+    #card {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas: 
+            "image image none none status status"
+            "image image none none status status"
+            "image image title title title title"
+            "image image title title title title"
+            "image image source source source source"
+            "image image source source source source"
+            "ingredbtn ingredbtn instructbtn instructbtn savebtn savebtn"
+            "ingredbtn ingredbtn instructbtn instructbtn savebtn savebtn"
+            "ingredbtn ingredbtn instructbtn instructbtn savebtn savebtn"
+            "ingredbtn ingredbtn instructbtn instructbtn savebtn savebtn";
+    }
+    
+    #card h1 {
+        font-size: 1rem;
+    }
+
+    #card h2 {
+        font-size: 0.8rem;
+    }
+
+    #status h3 {
+        padding-left: 0.1rem;
+        font-size: 0.5rem;
+    }
+
+    #status i {
+        font-size: 0.6rem;
+    }
+
+    #card button {
+        font-size: 0.6rem;
+    }
+}
+
+/* mobile devices 480px and down landscape */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 844px) and (orientation: landscape) {
+
 }
