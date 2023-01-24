@@ -1,0 +1,84 @@
+#card {
+    margin-top: 5px;
+    height: 10rem;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: 
+        "image title title status"
+        "image title title status"
+        "image source source ."
+        "image source source ."
+        "image ingredbtn instructbtn savebtn"
+        "image ingredbtn instructbtn savebtn"
+        "image ingredbtn instructbtn savebtn";
+        align-items: center;
+}
+
+#card img {
+    grid-area: image;
+    object-fit: scale-down;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#card h1 {
+    grid-area: title;
+    /* height: 100%; */
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0rem;
+    padding: 0.1rem;
+}
+
+#card h2 {
+    grid-area: source;
+    text-align: center;
+    /* height: 100%; */
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 0rem;
+    padding: 0.1rem;
+}
+
+#card button {
+    width: 80%;
+    outline: none;
+    height: 85%;
+    margin: 0.2rem;
+    justify-self: center;
+    
+}
+
+#ingred-btn {
+    grid-area: ingredbtn;
+}
+
+#instruct-btn {
+    grid-area: instructbtn;
+}
+
+#save-btn {
+    grid-area: savebtn;
+}
+
+#status {
+    grid-area: status;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    color: rgb(50, 138, 50);
+}
+
+#status h3 {
+    display: inline-flex;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}

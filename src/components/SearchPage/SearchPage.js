@@ -4,6 +4,29 @@ import SearchResultCard from "../SearchResultCard/SearchResultCard";
 
 const SearchPage = () => {
 
+    let arr = [];
+
+    let fakeArr = () => {
+        for (let i = 0; i < 20; i++) {
+            let obj = {
+                title: "Search Result Title",
+                source: "source"
+            }
+            arr.push(obj)
+        }
+    }
+
+    fakeArr();
+
+    let renderSearchResultCards = arr.map((result, i) => {
+        return(
+            <SearchResultCard 
+            key={i} 
+            result={result}
+            />
+        )
+    })
+
     return(
         <>
         <div id="layout-grid-search-page">
@@ -26,7 +49,7 @@ const SearchPage = () => {
             </div>
             <div id="main-search-page">
                 <div id="search-result-container">
-                    <SearchResultCard />
+                    {renderSearchResultCards}
                 </div>
             </div>
         </div>
