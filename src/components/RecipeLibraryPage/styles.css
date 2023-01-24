@@ -9,6 +9,11 @@
     grid-row-gap: 0rem;
 }
 
+#kitchen-nav-container {
+    grid-area: kitchenNav;
+    padding: 1rem;
+}
+
 #kitchen-navbar{
     height: 100%;
 }

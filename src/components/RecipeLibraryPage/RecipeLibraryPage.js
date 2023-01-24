@@ -29,7 +29,7 @@ const RecipeLibrary = () => {
 
     return(
         <>
-        <div id="layout-grid-recipe-librar">
+        <div id="layout-grid-recipe-library">
             <div id="kitchen-nav-container">
                 <nav id="kitchen-navbar">
                     <ul>
