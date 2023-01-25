@@ -105,3 +105,93 @@
     cursor: pointer;
 
 }
+
+/* mobile devices 480px and down*/
+@media only screen and (max-width: 480px) {
+    #kitchen-nav-container {
+        width: 100vw;
+        padding: 0rem;
+    }
+
+    #kitchen-navbar {
+        padding: 0rem;
+    }
+
+    #kitchen-navbar ul {
+        padding: 0rem;
+    }
+
+    #searchbar-container {
+        width: 100vw;
+        padding: 0rem;
+    }
+
+    #kitchen-page-card-deck {
+        grid: auto-flow / repeat(2, 1fr);
+    }
+
+    .add-ingredient {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* mobile devices 480px and down landscape */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+    #kitchen-nav-container {
+        width: 100vw;
+        padding: 0rem;
+    }
+
+    #kitchen-navbar {
+        padding: 0rem;
+    }
+
+    #kitchen-navbar ul {
+        padding: 0rem;
+    }
+
+    #searchbar-container {
+        width: 100vw;
+        padding: 0rem;
+    }
+
+    #kitchen-page-card-deck {
+        grid: auto-flow / repeat(3, 1fr);
+    }
+
+    .add-ingredient {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+
+/*  mobile devices between 480px and 768px landscape */
+@media only screen and (min-width: 480px) and (max-width: 844px) and (orientation: landscape) {
+    #kitchen-nav-container {
+        width: 100vw;
+        padding: 0rem;
+    }
+
+    #kitchen-navbar {
+        padding: 0rem;
+    }
+
+    #kitchen-navbar ul {
+        padding: 0rem;
+    }
+
+    #searchbar-container {
+        width: 100vw;
+        padding: 0rem;
+    }
+
+    #kitchen-page-card-deck {
+        grid: auto-flow / repeat(3, 1fr);
+    }
+
+    .add-ingredient {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
