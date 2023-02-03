@@ -1,8 +1,9 @@
 import React from 'react';
 import bvideo from '../backgroundVideo.mp4'
+import LoginModal from '../LoginModal/LoginModal';
 import './styles.css'
 
-const LandingPage = () => {
+const LandingPage = ( {isLoginOpen, setisLoginOpen} ) => {
 
     return(
     <>
@@ -49,6 +50,7 @@ const LandingPage = () => {
         </div>
         </div>
     </div>
+    <LoginModal open={isLoginOpen} onClose={() => setisLoginOpen(false)} />
     </>
     )
 };

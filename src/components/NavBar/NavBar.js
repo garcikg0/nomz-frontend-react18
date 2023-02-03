@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-const NavBar = () => {
+const NavBar = ( {setIsLoginOpen} ) => {
 
     return(
     <>
@@ -10,7 +10,9 @@ const NavBar = () => {
         <a><h1><Link to="/">Nomz</Link></h1></a>
         
         <ul>
-            <li><Link to="/home">Login</Link></li>
+            <li>
+                <button onClick={ () => setIsLoginOpen(true)}>Login</button>
+            </li>
             <li>Sign Up</li>
         </ul>
     </nav>
