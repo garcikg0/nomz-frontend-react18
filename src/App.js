@@ -7,6 +7,7 @@ import HomePage from "./components/HomePage/HomePage";
 import KitchenPage from "./components/KitchenPage/KitchenPage";
 import SearchPage from "./components/SearchPage/SearchPage";
 import RecipeLibraryPage from "./components/RecipeLibraryPage/RecipeLibraryPage"
+import LoginPage from "./components/LoginPage/LoginPage";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/kitchen" element={<KitchenPage />} />
       <Route path="/search" element={<SearchPage />} />
       <Route path='/recipelibrary' element={<RecipeLibraryPage />} />
+      <Route path='/login' element={LoginPage} />
     </Routes>
     </>
   )
