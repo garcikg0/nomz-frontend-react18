@@ -29,7 +29,7 @@ function App() {
       <Route path="/kitchen" element={<KitchenPage />} />
       <Route path="/search" element={<SearchPage />} />
       <Route path='/recipelibrary' element={<RecipeLibraryPage />} />
-      <Route path='/login' element={LoginPage} />
+      <Route path='/login' element={<LoginPage />} />
     </Routes>
     </>
   )
