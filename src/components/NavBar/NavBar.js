@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-const NavBar = ( {setIsLoginOpen} ) => {
+const NavBar = ( {handleAutoLoginSubmit} ) => {
 
     return(
     <>
@@ -11,7 +11,10 @@ const NavBar = ( {setIsLoginOpen} ) => {
         
         <ul>
             <li>
-                <button onClick={ () => setIsLoginOpen(true)}>Login</button>
+                <button><Link to="/login">Login</Link></button>
+            </li>
+            <li>
+                <button onClick={handleAutoLoginSubmit}>Auto-Login</button>
             </li>
             <li>Sign Up</li>
         </ul>

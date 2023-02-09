@@ -1,12 +1,7 @@
-import React, { useState }from "react";
+import React from "react";
 import './styles.css';
 
-const LoginPage = () => {
-
-    const [loginData, setLoginData] = useState ({
-        email: "",
-        password: ""
-    })
+const LoginPage = ({ loginData, setLoginData, handleLoginSubmit}) => {
 
     const handleChange = e => {
         const value = e.target.value;
@@ -17,22 +12,6 @@ const LoginPage = () => {
             [name]: value
         })
     };
-
-    const handleLoginSubmit=e => {
-        e.preventDefault();
-        console.log(loginData)
-        fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-            },
-            body: JSON.stringify(loginData)
-        })
-        .then(r => r.json())
-        .then(data => {
-            console.log(data)
-        })
-    }
 
     return(
     <>

@@ -12,24 +12,64 @@ import LoginPage from "./components/LoginPage/LoginPage";
 function App() {
 
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+   const [loginData, setLoginData] = useState ({
+        email: "",
+        password: ""
+    })
+
+  const handleLoginSubmit = e => {
+    e.preventDefault();
+    fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(loginData)
+    })
+    .then(r => r.json())
+    .then(data => {
+        console.log(data)
+        const { user, token } = data
+        localStorage.token = token
+    })
+  }
+
+  const handleAutoLoginSubmit = e => {
+    e.preventDefault();
+    fetch("http://localhost:3000/autologin", {
+      method: "GET",
+      headers: {
+        "Authorization" : `Bearer ${localStorage.token}`
+      }
+    })
+    .then(r => r.json())
+    .then(data => {
+      console.log(data)
+    })
+  }
 
   return(
     <> 
     <NavBar
-      setIsLoginOpen={setIsLoginOpen} 
+      handleAutoLoginSubmit={handleAutoLoginSubmit}
     />
     <Routes>
       <Route path="/" element={
         <LandingPage 
-        isLoginOpen={isLoginOpen}
-        setIsLoginOpen={setIsLoginOpen}
+          isLoginOpen={isLoginOpen}
+          setIsLoginOpen={setIsLoginOpen}
         />} 
       />
       <Route path="/home" element={<HomePage />} />
       <Route path="/kitchen" element={<KitchenPage />} />
       <Route path="/search" element={<SearchPage />} />
       <Route path='/recipelibrary' element={<RecipeLibraryPage />} />
-      <Route path='/login' element={<LoginPage />} />
+      <Route path='/login' element={
+        <LoginPage
+          loginData={loginData}
+          setLoginData={setLoginData}
+          handleLoginSubmit={handleLoginSubmit}
+        />} />
     </Routes>
     </>
   )
